@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/mainLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:text="Hello again"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textAlignment="center"
+        android:paddingTop="100dp"
+        android:textColor="@android:color/background_light" />
+
+    <TextView
+        android:text="Sign in using"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/textView"
+        android:layout_weight="0.5"
+        android:textColor="@android:color/background_light" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="2">
+
+        <Button
+            android:text="Google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnGoogle"
+            android:layout_weight="1"
+            android:background="@drawable/btngoogle"
+            android:layout_marginRight="6dp"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:text="facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnFacebook"
+            android:layout_weight="1"
+            android:background="@drawable/btnfacebook"
+            android:layout_marginLeft="6dp"
+            android:textColor="@android:color/background_light" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="18dp"
+        android:paddingBottom="6dp"
+        android:weightSum="3">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#335C6BC0"
+            android:layout_weight="1"
+            android:layout_marginTop="9dp"></View>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="OR"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#335C6BC0"
+            android:layout_marginTop="9dp">
+
+        </View>
+
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/tilUsername"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@color/blue50">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:id="@+id/etUsername"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/blue50"
+            android:scrollHorizontally="false" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@color/blue50"
+        app:counterEnabled="true"
+        app:counterMaxLength="8"
+        android:id="@+id/tilPassword">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:id="@+id/etPassword"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@color/blue50"
+            android:password="true"
+            android:inputType="textPassword" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:text="Log in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLogin"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:text="Forgot your password?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvForgot"
+        android:textAlignment="center"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="12dp"
+        android:textColor="@android:color/background_light" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="24dp"
+        android:gravity="bottom">
+
+        <TextView
+            android:text="Sign up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvSignup"
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:text="Terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTerms"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/background_light" />
+    </LinearLayout>
+
+</LinearLayout>
+
