@@ -9,16 +9,16 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="itea.contactstest2.MainActivity"
-    android:weightSum="10">
+    android:weightSum="10"
+    tools:context="itea.contactstest2.MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
         android:text="Log into the system"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Material.Large" />
 
 
     <android.support.design.widget.TextInputLayout
@@ -27,10 +27,10 @@
         android:layout_weight="2">
 
         <EditText
-            android:layout_width="match_parent"
-            android:hint="Username"
             android:id="@+id/etUsername"
-            android:layout_height="match_parent" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Username" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -39,22 +39,24 @@
         android:layout_weight="2">
 
         <EditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Password"
             android:inputType="numberPassword"
-            android:numeric="integer"
-            android:id="@+id/etPassword" />
+            android:numeric="integer" />
     </android.support.design.widget.TextInputLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"/>
+        android:layout_weight="3" />
+
     <Button
+        android:id="@+id/btnLogin"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:id="@+id/btnLogin"
-        android:text="Log in"
-        style="@style/Widget.AppCompat.Button.Colored" />
+        android:text="Log in" />
 </LinearLayout>

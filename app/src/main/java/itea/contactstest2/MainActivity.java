@@ -41,3 +41,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+
+/*
+* 1 Никогда не создавай ссылку на активити 22 строка
+* */

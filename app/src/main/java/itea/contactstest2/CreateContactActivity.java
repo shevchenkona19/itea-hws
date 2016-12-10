@@ -4,9 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -16,8 +16,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
-
-import java.util.List;
 
 public class CreateContactActivity extends AppCompatActivity {
 
@@ -299,3 +297,15 @@ public class CreateContactActivity extends AppCompatActivity {
         }
     }
 }
+
+/*
+* 1 такого ужаса как в 51 строке быть не должно, хранить ссылки на активити НЕЛЬЗЯ
+* 2 подумай что ты забыл прописать и в каком файле что б получить доступ к внутреней памяти телефона
+* 3 В обработчике кнопки Скип есть баг, Очень большой и неприятный баг. Подумай что за баг,  и реши проблему.
+* 4 не придавай реквест кодам простые значения типа 1 2 3 ... делай более сложный 1122, 2212. Все простые могут быть заняты системой,
+*   предугадать это мы не можем но можем предавать более сложные коды
+* 5 сделай список 5 захардкоженых пользователей
+* 6 избавься от скроллВью - я тебе  уже говорил это плохое решение
+* 7 доделай дизайн
+* 8 сделай так что б можно было передавать картинку в листАктивити
+* */
