@@ -39,30 +39,36 @@ public class ContactEntity implements Parcelable {
         }
     };
 
-    public String getName(){
+    public String getName() {
         return name;
     }
-    public String getSurname(){
+
+    public String getSurname() {
         return surname;
     }
-    public String getTel(){
+
+    public String getTel() {
         return tel;
     }
-    public String getEmail(){
+
+    public String getEmail() {
         return email;
     }
-    public String getCity(){
+
+    public String getCity() {
         return city;
     }
-    public String getCountry(){
+
+    public String getCountry() {
         return country;
     }
-    public Uri getUri(){
+
+    public Uri getUri() {
         return uri;
     }
 
     public ContactEntity(String name, String surname, String tel,
-                         String email, String city, String country, Uri uri){
+                         String email, String city, String country, Uri uri) {
         this.name = name;
         this.surname = surname;
         this.tel = tel;
