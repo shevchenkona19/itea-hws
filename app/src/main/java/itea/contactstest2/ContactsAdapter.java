@@ -2,8 +2,6 @@ package itea.contactstest2;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -17,7 +15,6 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -122,9 +119,9 @@ public class ContactsAdapter extends ArrayAdapter<ContactEntity> {
             tvTel.setText(contactEntity.getTel());
             tvEmail.setText(contactEntity.getEmail());
             tvCityCountry.setText(contactEntity.getCity() + ", " + contactEntity.getCountry());
-            if (flagImg) {
+            if (true) {
                 Picasso.with(getContext())
-                        .load(contactEntity.getUri())
+                        .load(Uri.parse(contactEntity.getUri()))
                         .resize(64, 64)
                         .into(ivFace);
             } else {

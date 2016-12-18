@@ -84,7 +84,7 @@ public class CreateContactActivity extends AppCompatActivity {
                         Intent intent = new Intent(CreateContactActivity.this, ContactsActivity.class);
                         ContactEntity contactEntity = new ContactEntity(etName.getText().toString(), etSurname.getText().toString()
                                 , etTel.getText().toString(), etEmail.getText().toString(),
-                                etCity.getText().toString(), etCountry.getText().toString(), uri);
+                                etCity.getText().toString(), etCountry.getText().toString(), uri.toString());
                         intent.putExtra("CONTACTENTITY", contactEntity);
                         setResult(Activity.RESULT_OK, intent);
                         finish();

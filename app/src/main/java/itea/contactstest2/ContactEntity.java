@@ -1,6 +1,5 @@
 package itea.contactstest2;
 
-import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -15,7 +14,7 @@ public class ContactEntity implements Parcelable {
     private String email;
     private String city;
     private String country;
-    private Uri uri;
+    private String  uri;
 
     protected ContactEntity(Parcel in) {
         name = in.readString();
@@ -24,7 +23,7 @@ public class ContactEntity implements Parcelable {
         email = in.readString();
         city = in.readString();
         country = in.readString();
-        uri = in.readParcelable(Uri.class.getClassLoader());
+        uri = in.readString();
     }
 
     public static final Creator<ContactEntity> CREATOR = new Creator<ContactEntity>() {
@@ -63,12 +62,12 @@ public class ContactEntity implements Parcelable {
         return country;
     }
 
-    public Uri getUri() {
+    public String getUri() {
         return uri;
     }
 
     public ContactEntity(String name, String surname, String tel,
-                         String email, String city, String country, Uri uri) {
+                         String email, String city, String country, String uri) {
         this.name = name;
         this.surname = surname;
         this.tel = tel;
@@ -91,6 +90,6 @@ public class ContactEntity implements Parcelable {
         parcel.writeString(email);
         parcel.writeString(city);
         parcel.writeString(country);
-        parcel.writeParcelable(uri, i);
+        parcel.writeString(uri);
     }
 }
