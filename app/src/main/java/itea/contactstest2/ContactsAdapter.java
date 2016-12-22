@@ -39,6 +39,7 @@ public class ContactsAdapter extends ArrayAdapter<ContactEntity> {
         currPos = -1;
     }
 
+
     public ContactsAdapter(Context context, int resource, boolean flagImg, Uri defaultImg) {
         super(context, resource);
         list = new ArrayList<>();
@@ -135,8 +136,4 @@ public class ContactsAdapter extends ArrayAdapter<ContactEntity> {
     }
 }
 
-/*
-* 1 дженерезируй адаптер классом КотактЕнтити
-* 2 сделай так что б если пользовательне выбрал картинку то только тогда показывалась дефолтная
-*
-* */
+

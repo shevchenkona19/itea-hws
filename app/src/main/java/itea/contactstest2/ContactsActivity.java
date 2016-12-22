@@ -7,10 +7,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -58,7 +60,6 @@ public class ContactsActivity extends AppCompatActivity {
 
         ctAdapter = new ContactsAdapter(this, R.layout.each_item, flagImg , imageUri);
         lv.setAdapter(ctAdapter);
-        lv.setLongClickable(true);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getWindow().setStatusBarColor(getColor(R.color.colorPrimaryDark));
@@ -82,8 +83,19 @@ public class ContactsActivity extends AppCompatActivity {
                             }
                         })
                         .setTitle("Delete this contact?");
-                adBuilder.create().show();
+                adBuilder.create()
+                        .show();
                 return true;
+            }
+        });
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.d("MY", "OnClick");
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                ContactInfoFragment.newInstance(ctAdapter.getItem(i))
+                        .show(fragmentTransaction, "ContactInfo");
             }
         });
 

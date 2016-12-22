@@ -10,24 +10,24 @@
         android:id="@+id/ivFace"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
         android:layout_weight="20"
-        app:srcCompat="@drawable/contact_1"
         android:background="@drawable/img"
-        android:layout_marginRight="10dp"/>
+        app:srcCompat="@drawable/contact_1" />
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="60"
+        android:orientation="vertical"
         android:weightSum="2">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:paddingTop="10dp"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
+            android:paddingTop="10dp"
             android:weightSum="2">
 
             <TextView
@@ -84,12 +84,13 @@
     </LinearLayout>
 
     <Button
-        android:text="Call"
+        android:id="@+id/btnCall"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:id="@+id/btnCall"
         android:layout_weight="20"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+        android:focusable="false"
+        android:text="Call" />
 
 
 </LinearLayout>

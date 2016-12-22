@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/AppTheme"
-    tools:context="itea.contactstest2.ContactsActivity">
+    tools:context="itea.contactstest2.ContactsActivity"
+    android:focusable="false">
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
@@ -37,7 +38,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hapticFeedbackEnabled="false"
-                android:text="CREATE" />
+                android:text="CREATE"
+                android:focusable="false"/>
         </LinearLayout>
         </android.support.v7.widget.Toolbar>
 
@@ -54,7 +56,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/lvContacts"
-            android:dividerHeight="0dp" />
+            android:dividerHeight="0dp"
+            android:focusable="false"/>
     </LinearLayout>
 
 </RelativeLayout>
